@@ -1,0 +1,133 @@
+:root {
+    --orange: #f36b16;
+    --orange-dark: #d9570b;
+    --ink: #202124;
+    --muted: #68717b;
+    --pale: #f3f5f8;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); font-family: Arial, Helvetica, sans-serif; background: #f5f6f8; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+.site-header { height: 76px; background: linear-gradient(100deg, #d9570b, #f47719); color: white; position: relative; z-index: 5; }
+.nav-wrap { max-width: 1500px; height: 100%; margin: auto; padding: 0 34px; display: flex; align-items: center; gap: 36px; }
+.brand { display: flex; align-items: center; gap: 9px; min-width: 245px; font-size: 22px; letter-spacing: -.8px; font-weight: 800; }
+.brand b { font-weight: 400; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border: 2px solid white; border-radius: 50%; font-family: Georgia, serif; font-size: 28px; font-style: italic; }
+.main-nav, .right-nav { display: flex; align-items: center; height: 100%; gap: 28px; font-size: 14px; }
+.main-nav a, .right-nav a { height: 100%; display: flex; align-items: center; opacity: .95; }
+.main-nav .active { border-bottom: 3px solid white; font-weight: 700; }
+.right-nav { margin-left: auto; gap: 25px; }
+.phone { font-weight: 700; white-space: nowrap; }
+.login-top { border: 0; border-radius: 8px; background: white; color: #242424; padding: 13px 22px; font-weight: 700; }
+.login-top span { margin-left: 15px; }
+.menu-toggle { display: none; border: 0; background: transparent; color: white; font-size: 25px; }
+.hero { background: var(--orange); color: white; min-height: 610px; border-radius: 0 0 42px 42px; overflow: hidden; }
+.hero-inner { max-width: 1500px; min-height: 610px; margin: auto; padding: 42px 34px 0; position: relative; }
+.breadcrumb { font-size: 13px; font-weight: 600; letter-spacing: .2px; }
+.breadcrumb span { padding: 0 18px; font-size: 22px; vertical-align: -2px; opacity: .8; }
+.hero-copy { position: relative; z-index: 2; padding-top: 55px; max-width: 700px; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; opacity: .8; margin: 0 0 15px; }
+h1 { font-size: clamp(38px, 4.2vw, 58px); line-height: 1.16; letter-spacing: -2.2px; font-weight: 400; margin: 0; }
+.trust-line { display: flex; align-items: center; gap: 15px; margin-top: 18px; font-size: 15px; }
+.trust-line i { width: 1px; height: 15px; background: rgba(255,255,255,.8); }
+.trust-line a { font-size: 14px; }
+.hero-actions { display: flex; gap: 16px; margin-top: 38px; align-items: center; }
+.primary-button { background: white; color: #252525; border: 0; border-radius: 12px; min-width: 195px; padding: 17px 28px; font-weight: 700; box-shadow: 0 4px 12px rgba(126,52,0,.08); }
+.save-button { display: inline-flex; align-items: center; justify-content: center; min-width: 145px; padding: 17px 24px; border-radius: 12px; background: rgba(173,67,0,.35); font-weight: 700; }
+.hero-art { position: absolute; right: 35px; bottom: 0; width: 48%; height: 490px; overflow: hidden; }
+.sun-shape { position: absolute; width: 360px; height: 360px; border-radius: 50%; background: rgba(255,190,123,.35); right: 130px; top: 8px; }
+.sofa { position: absolute; bottom: 0; right: 0; width: 83%; height: 190px; }
+.sofa-back { position: absolute; right: 0; bottom: 65px; width: 100%; height: 115px; background: #f2eee9; border-radius: 28px 28px 0 0; }
+.sofa-seat { position: absolute; bottom: 0; width: 100%; height: 75px; background: #e5ded6; border-radius: 20px 20px 0 0; }
+.sofa-arm { position: absolute; right: 0; bottom: 0; width: 75px; height: 180px; background: #f7f2ec; border-radius: 22px 22px 0 0; }
+.person { position: absolute; width: 310px; height: 420px; right: 21%; bottom: 30px; }
+.face { position: absolute; z-index: 3; top: 48px; left: 120px; width: 95px; height: 112px; background: #b97751; border-radius: 44% 48% 45% 45%; transform: rotate(-4deg); }
+.hair { position: absolute; z-index: 4; top: 20px; left: 105px; width: 125px; height: 155px; background: #29201e; border-radius: 55% 55% 35% 40%; transform: rotate(-5deg); }
+.hair:after { content: ""; position: absolute; top: 34px; left: 22px; width: 83px; height: 103px; background: #b97751; border-radius: 45%; }
+.neck { position: absolute; z-index: 2; top: 145px; left: 145px; width: 42px; height: 55px; background: #b97751; }
+.shirt { position: absolute; z-index: 2; top: 170px; left: 68px; width: 205px; height: 210px; background: #9f1e13; border-radius: 65px 65px 12px 12px; transform: skew(-5deg); }
+.arm { position: absolute; z-index: 4; top: 245px; left: 42px; width: 190px; height: 31px; background: #b97751; border-radius: 22px; transform: rotate(9deg); }
+.jeans { position: absolute; z-index: 3; bottom: 0; left: 75px; width: 225px; height: 115px; background: #315579; border-radius: 60px 60px 0 0; }
+.laptop { position: absolute; z-index: 5; top: 235px; left: -2px; width: 205px; transform: rotate(5deg); }
+.laptop-screen { height: 120px; background: #eaf0f2; border: 7px solid #cbd3d8; border-radius: 8px; display: grid; place-items: center; box-shadow: 0 8px 20px #9c480e44; }
+.laptop-screen span { color: var(--orange); font-size: 38px; font-weight: 800; }
+.laptop-base { height: 10px; margin-left: -10px; width: 225px; background: #bfc8cc; border-radius: 0 0 12px 12px; }
+.plant { position: absolute; z-index: 1; bottom: 110px; left: 3%; width: 6px; height: 130px; background: #547d4c; transform: rotate(-8deg); }
+.plant:before, .plant:after { content: ""; position: absolute; width: 48px; height: 22px; background: #6e985e; border-radius: 100% 0 100% 0; }
+.plant:before { top: 25px; left: -40px; transform: rotate(20deg); }
+.plant:after { top: 65px; left: 3px; transform: rotate(-25deg); }
+.plant-two { left: 11%; height: 95px; transform: rotate(12deg); }
+.art-caption { position: absolute; bottom: 16px; left: 15px; color: #7e4a2c; font-size: 12px; font-weight: 700; z-index: 6; }
+.why-section { max-width: 1500px; margin: 90px auto 70px; padding: 0 34px; }
+.why-card { background: white; border-radius: 30px; padding: 42px 40px 48px; box-shadow: 0 8px 35px rgba(29,44,62,.09); }
+.why-card h2 { font-size: 34px; font-weight: 400; letter-spacing: -1px; margin: 0 0 10px; }
+.section-intro { color: var(--muted); margin: 0 0 28px; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.feature { background: #f2f4f7; border-radius: 10px; min-height: 170px; padding: 24px 28px; }
+.feature-icon { display: block; color: #7890a8; font-size: 35px; margin-bottom: 12px; }
+.feature h3 { font-size: 17px; margin: 0 0 8px; }
+.feature p { color: #68717b; line-height: 1.5; margin: 0; font-size: 14px; }
+.promo { position: fixed; z-index: 8; right: 0; top: 46%; display: flex; align-items: center; gap: 14px; width: 250px; padding: 18px 18px; background: #fff; border: 1px solid #e7e7e7; border-radius: 50px 0 0 50px; box-shadow: 0 5px 20px #3332; }
+.promo-icon { color: var(--orange); font-size: 25px; }
+.promo strong, .promo small, .promo a { display: block; }
+.promo strong { font-size: 13px; }
+.promo small { font-size: 11px; color: var(--muted); margin: 5px 0; }
+.promo a { color: #244b70; font-size: 11px; font-weight: 800; margin-top: 9px; }
+.promo-close { position: absolute; right: 7px; top: 3px; background: none; border: 0; font-size: 20px; color: #444; }
+.cookie-note { position: fixed; z-index: 9; bottom: 25px; left: 4.2%; display: flex; align-items: center; gap: 18px; padding: 14px 20px; background: white; border-radius: 14px; box-shadow: 0 8px 35px #18202d20; }
+.cookie-note p { margin: 0; font-size: 11px; line-height: 1.5; color: #444; }
+.cookie-note a { color: var(--orange-dark); text-decoration: underline; }
+.cookie-note button { background: var(--orange); color: white; border: 0; border-radius: 8px; padding: 9px 14px; font-size: 12px; }
+.modal-backdrop { display: none; position: fixed; z-index: 20; inset: 0; background: #10182099; align-items: center; justify-content: center; padding: 20px; }
+.modal-backdrop.open { display: flex; }
+.demo-modal { position: relative; max-width: 420px; width: 100%; background: white; padding: 38px; border-radius: 20px; text-align: center; box-shadow: 0 20px 70px #0004; }
+.modal-close { position: absolute; right: 16px; top: 12px; background: none; border: 0; font-size: 26px; color: #555; }
+.modal-symbol { display: inline-grid; place-items: center; width: 54px; height: 54px; background: var(--orange); color: white; border-radius: 50%; font: italic 36px Georgia,serif; }
+.demo-modal h2 { font-size: 24px; margin: 18px 0 10px; }
+.demo-modal p { color: var(--muted); line-height: 1.6; font-size: 14px; }
+.modal-ok { background: var(--orange); color: white; margin-top: 12px; }
+footer { display: flex; justify-content: space-between; gap: 15px; padding: 24px 5%; color: #77808a; font-size: 12px; }
+@media (max-width: 1050px) {
+    .nav-wrap { gap: 20px; }
+    .brand { min-width: auto; }
+    .right-nav { gap: 14px; }
+    .right-nav > a:not(.phone) { display: none; }
+    .hero-art { opacity: .72; right: -45px; width: 50%; }
+    .hero-copy { max-width: 62%; }
+}
+@media (max-width: 700px) {
+    .site-header { height: 66px; }
+    .nav-wrap { padding: 0 18px; }
+    .brand { font-size: 18px; }
+    .brand-mark { width: 32px; height: 32px; font-size: 23px; }
+    .main-nav, .right-nav { display: none; }
+    .menu-toggle { display: block; margin-left: auto; }
+    .hero, .hero-inner { min-height: 650px; }
+    .hero-inner { padding: 28px 22px 0; }
+    .breadcrumb { font-size: 11px; }
+    .breadcrumb span { padding: 0 7px; }
+    .hero-copy { padding-top: 52px; max-width: 100%; }
+    h1 { font-size: clamp(34px, 9vw, 48px); letter-spacing: -1.5px; }
+    .trust-line { gap: 9px; font-size: 12px; flex-wrap: wrap; }
+    .hero-actions { margin-top: 25px; }
+    .primary-button { min-width: 155px; padding: 15px 18px; }
+    .save-button { min-width: 110px; padding: 15px 14px; }
+    .hero-art { width: 100%; height: 265px; right: -20px; opacity: .9; }
+    .person { transform: scale(.66); transform-origin: bottom right; right: 22%; bottom: 8px; }
+    .sofa { height: 100px; width: 85%; }
+    .sofa-back { height: 70px; bottom: 35px; }
+    .sofa-seat { height: 42px; }
+    .sofa-arm { height: 100px; width: 45px; }
+    .sun-shape { width: 200px; height: 200px; right: 20%; }
+    .plant { bottom: 55px; transform: scale(.7); }
+    .art-caption { font-size: 10px; }
+    .why-section { margin: 45px auto; padding: 0 16px; }
+    .why-card { padding: 28px 20px; border-radius: 22px; }
+    .why-card h2 { font-size: 28px; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .promo { top: auto; bottom: 105px; width: 220px; transform: scale(.88); transform-origin: right center; }
+    .cookie-note { left: 12px; bottom: 12px; padding: 12px; gap: 10px; }
+    footer { flex-direction: column; padding: 20px; }
+}
